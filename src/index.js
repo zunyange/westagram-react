@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Login from "./pages/Login/Login";
-// import Signup from "./pages/Signup/Signup";
-import Main from "./pages/Main/Main";
-import Router from "./Router";
-import Kimjunyoung from "./Kimjunyoung";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Router from './Router';
+// import Login from './pages/Login/Login';
+// import Main from './pages/Main/Main';
+import './styles/common.scss';
+import './styles/reset.scss';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 //const container = document.getElementById("root");
 //const root = createRoot(container); line8,9는 line7 과 동일
 

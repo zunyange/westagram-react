@@ -6,25 +6,19 @@
 // index.js에서 랜더링할 컴포넌트를 이렇게 매번 수정해야 하고 컴포넌트 별로 결로 설정 또한 할 수 없다.
 // 따라서 이런 경로 관리를 좀 더 편리하게 하기 위해 Router.js 파일로 관리한다.
 
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login/Login";
-// import Signup from "./pages/Signup/Signup";
-import Main from "./pages/Main/Main";
-// import Nav from "./components/Nav/Nav";
-// import Footer from "./components/Footer/Footer";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login/Login';
+import Main from './pages/Main/Main';
 
 //라우터 컴포넌트의 기본 구조
 const Router = () => {
   return (
     <BrowserRouter>
-      {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Login />} />
-        {/* <Route path="/signup" element={<Signup />} /> */}
         <Route path="/main" element={<Main />} />
       </Routes>
-      {/* <Footer /> */}
     </BrowserRouter>
   );
 };

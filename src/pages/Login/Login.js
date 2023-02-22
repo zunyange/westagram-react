@@ -1,7 +1,14 @@
 import React from "react";
-import "./Login.css";
+import { useNavigate } from "react-router-dom";
+import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate("/main");
+  };
+
   return (
     <div className="wrap_box">
       <div className="westagram">Westagram</div>
@@ -14,7 +21,12 @@ const Login = () => {
           />
           <input id="login_pw" type="password" placeholder="비밀번호" />
           <div>
-            <button className="login_btn" type="submit" id="login_login">
+            <button
+              className="login_btn"
+              type="submit"
+              id="login_login"
+              onClick={goToMain}
+            >
               로그인
             </button>
           </div>

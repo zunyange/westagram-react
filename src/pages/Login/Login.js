@@ -1,28 +1,45 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.scss";
+import React from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.scss';
 
-const Login = () => {
+const LoginJunyoung = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate("/main");
+    navigate('/main');
+  };
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+  const saveUserId = event => {
+    setId(event.target.value);
+    // console.log('id', id);
+  };
+  const saveUserPw = event => {
+    setPw(event.target.value);
+    // console.log('pw', pw);
   };
 
   return (
-    <div className="wrap_box">
+    <div className="wrapBox">
       <div className="westagram">Westagram</div>
-      <form className="login_form">
-        <form action="#none">
+      <form className="loginForm">
+        <form action="#none" className="loginWrap">
           <input
-            id="login_id"
+            className="loginId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            onChange={saveUserId}
           />
-          <input id="login_pw" type="password" placeholder="비밀번호" />
+          <input
+            className="loginPw"
+            type="password"
+            placeholder="비밀번호"
+            onChange={saveUserPw}
+          />
           <div>
             <button
-              className="login_btn"
+              className="loginBtn"
               type="submit"
               id="login_login"
               onClick={goToMain}
@@ -31,8 +48,8 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <div className="forgot_pw">
-          <a href="#" className="page_move">
+        <div className="forgotPw">
+          <a href="#!" className="pageMove">
             비밀번호를 잊으셨나요?
           </a>
         </div>
@@ -41,4 +58,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginJunyoung;

@@ -1,99 +1,104 @@
 import React from 'react';
 import './Main.scss';
-// import { useNavigate } from "react-router-dom";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const Main = () => {
+const MainJunyoung = () => {
   return (
     <main className="main">
-      <header>
-        <nav>
+      <header className="header">
+        <nav className="headerNav">
           {/* 로고 */}
           <div className="logo">
-            <div onClick="location.href='#'">
+            <div onClick="location.href='#'" className="logoClick">
               <img
-                src="/images/instagram.png"
-                className="about-logo"
+                src="/images/junyoung/instagram.png"
+                className="aboutLogo"
                 alt="instagram_logo"
               />
               {/* <a><i className="fab fa-instagram"></i></a> */}
             </div>
-            <div className="wefont">
+            <div className="weFont">
               <div className="we">
                 <a href="#!">Westagram</a>
               </div>
             </div>
           </div>
           {/* 검색 */}
-          <div className="searchbar">
-            <input type="text" placeholder="검색" />
+          <div className="searchBar">
+            <input type="text" className="searchText" placeholder="검색" />
           </div>
           {/* 상단바 아이콘들 */}
           <div className="nav">
-            <div className="navo" onClick="location.href='#'"></div>
-            <div className="navt" onClick="location.href='#'"></div>
-            <div className="navh" oncCick="location.href='#'"></div>
+            <div className="navCompass" onClick="location.href='#'" />
+            <div className="navHeart" onClick="location.href='#!'" />
+            <div className="navProfile" onClick="location.href='#!'" />
           </div>
         </nav>
       </header>
       {/* 피드 사진 */}
-      <article>
-        <div className="feed_box"></div>
+      <article className="articleWrap">
+        <div className="feedBox" />
         <div className="feed">
-          <div className="feed_id">
-            <div className="id_round">
-              <div className="id_box">
-                <div className="id_box_img">
+          <div className="feedId">
+            <div className="idRound">
+              <div className="idBox">
+                <div className="idBoxImg">
                   <img
-                    className="id_img"
-                    src="/images/loopy.png"
+                    className="idImg"
+                    src="/images/junyoung/loopy.png"
                     alt="내 프로필"
                   />
                 </div>
-                <div className="id_container">
-                  <div className="id_name">z_zxxn_n</div>
+                <div className="idContainer">
+                  <div className="idName">z_zxxn_n</div>
                   <div className="place">부산 해운대</div>
                 </div>
               </div>
-              <div className="more_details">
-                <img className="more_img" src="/images/more.png" alt="더보기" />
+              <div className="moreDetails">
+                <img
+                  className="moreImg"
+                  src="/images/junyoung/more.png"
+                  alt="더보기"
+                />
               </div>
             </div>
           </div>
-          <div className="img_area">
+          <div className="imgArea">
             <img
-              className="feed_img"
-              src="/images/my_profile.png"
+              className="feedImg"
+              src="/images/junyoung/my_profile.png"
               alt="피드 사진"
             />
           </div>
           {/* 피드 사진 아래 아이콘 */}
-          <div className="feed_bottom">
-            <div className="emoticon_box">
-              <div className="emoticon_box2">
-                <div className="heart_box">
-                  <img className="heart" src="/images/heart.png" alt="하트" />
-                </div>
-                <div className="comment_box">
+          <div className="feedBottom">
+            <div className="emoticonBox">
+              <div className="emoticonBox2">
+                <div className="heartBox">
                   <img
-                    className="coment"
-                    src="/images/comment.png"
+                    className="heart"
+                    src="/images/junyoung/heart.png"
+                    alt="하트"
+                  />
+                </div>
+                <div className="commentBox">
+                  <img
+                    className="comment"
+                    src="/images/junyoung/comment.png"
                     alt="코멘트"
                   />
                 </div>
-                <div className="direct_box">
+                <div className="directBox">
                   <img
                     className="direct"
-                    src="/images/direct.png"
+                    src="/images/junyoung/direct.png"
                     alt="종이비행기"
                   />
                 </div>
               </div>
-              <div className="bookmark_box">
+              <div className="bookmarkBox">
                 <img
                   className="bookmark"
-                  src="/images/bookmark.png"
+                  src="/images/junyoung/bookmark.png"
                   alt="공유"
                 />
               </div>
@@ -101,48 +106,48 @@ const Main = () => {
           </div>
 
           {/* 피드 사진 아래 */}
-          <div className="feed_like_box">
-            <div className="feed_like_picture">
+          <div className="feedLikeBox">
+            <div className="feedLikePicture">
               <img
-                className="feed_like_people src="
-                src="/images/loopy.png"
+                className="feedLikePeople"
+                src="/images/junyoung/loopy.png"
                 alt="세원"
               />
             </div>
-            <p>
+            <p className="whoLike">
               z_zxxn_n
-              <span className="feed_like">님 외 247명이 좋아합니다.</span>
+              <span className="feedLike">님 외 247명이 좋아합니다.</span>
             </p>
           </div>
-          <div className="feed_article">
-            <div className="feed_article_box">
-              <div className="comments_container">
-                <span className="who_feed">z_zxxn_n</span>
-                <span className="feed_msg">
+          <div className="feedArticle">
+            <div className="feedArticleBox">
+              <div className="commentsContainer">
+                <span className="whoFeed">z_zxxn_n</span>
+                <span className="feedMsg">
                   멀리 떠나자 야이야이야이야이 바다로~ ..
                 </span>
-                <div className="more_msg">더 보기</div>
+                <div className="moreMsg">더 보기</div>
               </div>
-              <div className="comments1_box">
-                <p className="who_comment">
-                  ceohur<span className="comment_msg">어머 너무이뻐!</span>
+              <div className="comments1Box">
+                <p className="whoComment">
+                  ceohur<span className="commentMsg">어머 너무이뻐!</span>
                 </p>
-                <p className="who_comment">
+                <p className="whoComment">
                   Bussan.official
-                  <span className="comment_msg">
+                  <span className="commentMsg">
                     안녕하세요! 이미지가 좋으세요^^ 디엠확인 부탁드려요~
                   </span>
                 </p>
-                <p className="who_comment">
-                  dewrawing<span className="comment_msg">나랑도 가자~~!</span>
+                <p className="whoComment">
+                  dewrawing<span className="commentMsg">나랑도 가자~~!</span>
                 </p>
               </div>
-              <div className="new_comments">
+              <div className="newComments">
                 {/* <ul className="comments_list"> */}
-                <li className="comments_list">
-                  <div className="comments_area">
-                    <span className="user_id"></span>
-                    <span className="comment_contents"></span>
+                <li className="commentsList">
+                  <div className="commentsArea">
+                    <span className="userId" />
+                    <span className="commentContents" />
                   </div>
                 </li>
                 {/* </ul> */}
@@ -151,7 +156,7 @@ const Main = () => {
             </div>
           </div>
           <div className="inputContainer">
-            <div className="type_comment">
+            <div className="typeComment">
               <input
                 className="inputBox"
                 type="text"
@@ -168,11 +173,11 @@ const Main = () => {
       </article>
       {/* 오른쪽 스토리부분 */}
       {/*사이드 오른쪽 부분  */}
-      <section className="side-right">
-        <div className="side-container" onclick="location.href='#'">
-          <div className="wecode-logo"></div>
-          <div className="wecode-info">
-            <div className="real-wecode">
+      <section className="sideRight">
+        <div className="sideContainer" onclick="location.href='#'">
+          <div className="wecodeLogo" />
+          <div className="wecodeInfo">
+            <div className="realWecode">
               <span>wecode_bootcamp</span>
               <p>
                 WeCode<span>위코드</span>
@@ -181,86 +186,86 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="side-story">
-          <div className="side-navigation">
-            <span className="story-title">스토리</span>
-            <div onclick="location.href='#'" className="see-all">
+        <div className="sideStory">
+          <div className="sideNavigation">
+            <span className="storyTitle">스토리</span>
+            <div onclick="location.href='#'" className="seeAll">
               모두 보기
             </div>
           </div>
 
           <div className="story" onclick="location.href='#'">
-            <div className="story-img1"></div>
-            <div className="story-text">
-              <p className="story-text-bold">s.__.zy</p>
-              <p className="story-text-color">2시간 전</p>
+            <div className="storyImg1" />
+            <div className="storyText">
+              <p className="storyTextBold">s.__.zy</p>
+              <p className="storyTextColor">2시간 전</p>
             </div>
           </div>
 
           <div className="story" onclick="location.href='#'">
-            <div className="story-img2"></div>
-            <div className="story-text">
-              <p className="story-text-bold">s__k9211</p>
-              <p className="story-text-color">33분 전</p>
+            <div className="storyImg2" />
+            <div className="storyText">
+              <p className="storyTextBold">s__k9211</p>
+              <p className="storyTextColor">33분 전</p>
             </div>
           </div>
 
           <div className="story" onclick="location.href='#'">
-            <div className="story-img3"></div>
-            <div className="story-text">
-              <p className="story-text-bold">Ssoyoon</p>
-              <p className="story-text-color">10시간 전</p>
+            <div className="storyImg3" />
+            <div className="storyText">
+              <p className="storyTextBold">Ssoyoon</p>
+              <p className="storyTextColor">10시간 전</p>
             </div>
           </div>
 
           <div className="story" onclick="location.href='#'">
-            <div className="story-img4"></div>
-            <div className="story-text">
-              <p className="story-text-bold">h.dina</p>
-              <p className="story-text-color">20분 전</p>
+            <div className="storyImg4" />
+            <div className="storyText">
+              <p className="storyTextBold">h.dina</p>
+              <p className="storyTextColor">20분 전</p>
             </div>
           </div>
         </div>
 
         {/* 추천 시작 */}
-        <div className="side-recom">
-          <div className="side-navigation">
-            <span className="recom-title">회원님을 위한 추천</span>
-            <div onclick="location.href='#'" className="see-all">
+        <div className="sideRecom">
+          <div className="sideNavigation">
+            <span className="recomTitle">회원님을 위한 추천</span>
+            <div onclick="location.href='#'" className="seeAll">
               모두 보기
             </div>
           </div>
 
-          <div className="side-wrap">
-            <div className="sidewraps">
-              <div className="side-img" id="side-wrap-img1"></div>
-              <div className="side-childs">
-                <p className="recom-name">NewMinji</p>
-                <p className="recom-info">haerin님 외 7명이 팔...</p>
+          <div className="sideWrap">
+            <div className="sideWraps">
+              <div className="sideImg1" id="side-wrap-img1" />
+              <div className="sideChilds">
+                <p className="recomName">NewMinji</p>
+                <p className="recomInfo">haerin님 외 7명이 팔...</p>
               </div>
             </div>
 
             <button class="follow">팔로우</button>
           </div>
 
-          <div className="side-wrap">
-            <div className="sidewraps">
-              <div className="side-img" id="side-wrap-img2"></div>
-              <div className="side-childs">
-                <p className="recom-name">chae_0.0</p>
-                <p className="recom-info">Ssoyoon님 외 4명이...</p>
+          <div className="sideWrap">
+            <div className="sideWraps">
+              <div className="sideImg2" id="side-wrap-img2" />
+              <div className="sideChilds">
+                <p className="recomName">chae_0.0</p>
+                <p className="recomInfo">Ssoyoon님 외 4명이...</p>
               </div>
             </div>
 
             <button class="follow">팔로우</button>
           </div>
 
-          <div className="side-wrap">
-            <div className="sidewraps">
-              <div className="side-img" id="side-wrap-img3"></div>
-              <div className="side-childs">
-                <p className="recom-name">bbobbi</p>
-                <p className="recom-info">s._.zy 외 12명이 팔로...</p>
+          <div className="sideWrap">
+            <div className="sideWraps">
+              <div className="sideImg3" id="side-wrap-img3" />
+              <div className="sideChilds">
+                <p className="recomName">bbobbi</p>
+                <p className="recomInfo">s._.zy 외 12명이 팔로...</p>
               </div>
             </div>
 
@@ -268,11 +273,11 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="footer-wrapper">
-          <p className="footer-content">
-            Instagram 정보 · 지원 · 홍보센터 · API · <br></br>채용정보
-            개인정보처리방침 · 약관 ·<br></br> 디렉터리 · 프로필 · 해시태그 ·
-            언어
+        <div className="footerWrapper">
+          <p className="footerContent">
+            Instagram 정보 · 지원 · 홍보센터 · API · <br />
+            채용정보 개인정보처리방침 · 약관 ·<br /> 디렉터리 · 프로필 ·
+            해시태그 · 언어
           </p>
           <p className="version">ⓒ 2023 INSTAGRAM</p>
         </div>
@@ -281,4 +286,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainJunyoung;
